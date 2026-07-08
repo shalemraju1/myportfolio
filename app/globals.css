@@ -1,26 +1,172 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --background: #050816;
+  --foreground: #f8fafc;
+  --card-bg: rgba(10, 15, 30, 0.45);
+  --card-border: rgba(255, 255, 255, 0.08);
 }
 
-@theme inline {
+@theme {
+  /* Override background and foreground */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  /* Modern premium font system using Geist */
+  --font-sans: var(--font-geist-sans), Inter, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  
+  /* Custom Accent & Neon Colors */
+  --color-neon-blue: #00f2fe;
+  --color-neon-purple: #9d4edd;
+  --color-neon-pink: #f43f5e;
+  --color-dark-accent: #0f172a;
+  
+  /* Spacing */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-26: 6.5rem;
+  
+  /* Shadows and Glows */
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  --shadow-neon-blue: 0 0 25px rgba(0, 242, 254, 0.25), 0 0 50px rgba(0, 242, 254, 0.1);
+  --shadow-neon-purple: 0 0 25px rgba(157, 78, 221, 0.25), 0 0 50px rgba(157, 78, 221, 0.1);
+  --shadow-neon-pink: 0 0 25px rgba(244, 63, 94, 0.25), 0 0 50px rgba(244, 63, 94, 0.1);
+  
+  /* Border Radius System */
+  --radius-glass-sm: 8px;
+  --radius-glass: 16px;
+  --radius-glass-lg: 24px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom Utility Classes using Tailwind CSS v4 @utility directive */
+
+/* Glass effect utilities */
+@utility glass-panel {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-glass);
+}
+
+@utility glass-panel-interactive {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-glass);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6);
+    transform: translateY(-2px);
   }
 }
 
-body {
-  background: var(--background);
+@utility glass-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.3s ease;
+
+  &:focus {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(0, 242, 254, 0.4);
+    box-shadow: 0 0 15px 0 rgba(0, 242, 254, 0.15);
+    outline: none;
+  }
+}
+
+@utility glass-border {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@utility glass-border-glow {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+/* Glow Utilities */
+@utility glow-blue {
+  box-shadow: var(--shadow-neon-blue);
+}
+
+@utility glow-purple {
+  box-shadow: var(--shadow-neon-purple);
+}
+
+@utility glow-pink {
+  box-shadow: var(--shadow-neon-pink);
+}
+
+@utility glow-text-blue {
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.6), 0 0 20px rgba(0, 242, 254, 0.2);
+}
+
+@utility glow-text-purple {
+  text-shadow: 0 0 10px rgba(157, 78, 221, 0.6), 0 0 20px rgba(157, 78, 221, 0.2);
+}
+
+@utility glow-text-pink {
+  text-shadow: 0 0 10px rgba(244, 63, 94, 0.6), 0 0 20px rgba(244, 63, 94, 0.2);
+}
+
+/* Typography Gradient Utilities */
+@utility text-gradient-neon {
+  background: linear-gradient(135deg, #00f2fe 0%, #9d4edd 50%, #f43f5e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility text-gradient-blue-purple {
+  background: linear-gradient(135deg, #00f2fe 0%, #6366f1 50%, #9d4edd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility text-gradient-silver {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #64748b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Background Grids and Orbs */
+@utility bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@utility bg-grid-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Smooth Scrolling & Body setup */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Global focus styling for accessibility */
+*:focus-visible {
+  outline: 2px solid #00f2fe;
+  outline-offset: 4px;
 }
