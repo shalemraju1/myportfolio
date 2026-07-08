@@ -1,29 +1,5 @@
 "use client";
-import { FaJava } from "react-icons/fa6";
-import {
-    SiPython,
-    SiMysql,
-    SiReact,
-    SiNextdotjs,
-    SiTypescript,
-    SiTensorflow,
-    SiOpencv,
-    SiDocker,
-    SiGit,
-} from "react-icons/si";
-
-const skills = [
-    { name: "Python", icon: SiPython },
-    { name: "Java", icon: FaJava },
-    { name: "SQL", icon: SiMysql },
-    { name: "React", icon: SiReact },
-    { name: "Next.js", icon: SiNextdotjs },
-    { name: "TypeScript", icon: SiTypescript },
-    { name: "TensorFlow", icon: SiTensorflow },
-    { name: "OpenCV", icon: SiOpencv },
-    { name: "Docker", icon: SiDocker },
-    { name: "Git", icon: SiGit },
-];
+import { skills } from "@/constants/skills";
 
 export default function Skills() {
     return (

@@ -64,7 +64,7 @@ export default function Home() {
             <span className="text-gradient-neon glow-text-purple">Portfolio Design System</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-400 font-light leading-relaxed">
-            An ultra-premium visual framework combining Apple design precision, Linear layout flow, 
+            An ultra-premium visual framework combining Apple design precision, Linear layout flow,
             Vercel developer aesthetics, and futuristic glassmorphic interactions.
           </p>
         </section>
@@ -159,14 +159,14 @@ export default function Home() {
               <div className="space-y-2">
                 <span className="text-xs font-mono text-neon-pink">SANS BODY TEXT</span>
                 <p className="text-slate-300 font-sans leading-relaxed">
-                  Geist Sans is optimized for maximum visual clarity, sleek paragraph densities, 
+                  Geist Sans is optimized for maximum visual clarity, sleek paragraph densities,
                   and clean structural alignments. Perfect for bio sections and item descriptions.
                 </p>
               </div>
               <div className="space-y-2">
                 <span className="text-xs font-mono text-neon-blue">MONOSPACE SYSTEM</span>
                 <p className="text-slate-300 font-mono text-sm leading-relaxed">
-                  Geist Mono renders console lines, code outputs, and technical metadata 
+                  Geist Mono renders console lines, code outputs, and technical metadata
                   with flawless line breaks, crisp letter spacings, and high legibility.
                 </p>
               </div>
@@ -339,7 +339,7 @@ export default function Home() {
             {/* Project Showcase Section */}
             <div className="md:col-span-3 space-y-6">
               <h3 className="text-xl font-semibold text-slate-200">Featured Showcase Grid</h3>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <GlassCard className="border-white/[0.05]" interactive>
                   <GlassCardHeader className="p-5">
@@ -390,7 +390,7 @@ export default function Home() {
             {/* Interactive Form Component */}
             <div className="md:col-span-2 space-y-6">
               <h3 className="text-xl font-semibold text-slate-200">Interactive Glass Form</h3>
-              
+
               <GlassCard glowColor="purple" glowIntensity="medium">
                 <form onSubmit={handleFormSubmit}>
                   <GlassCardHeader>
