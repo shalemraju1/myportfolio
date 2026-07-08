@@ -1,5 +1,8 @@
 "use client";
 import { skills } from "@/constants/skills";
+import SkillGroupCard from "@/components/ui/skill-group-card";
+import { skillGroups } from "@/constants/skill-groups";
+import Reveal from "@/components/animations/reveal";
 
 export default function Skills() {
     return (
@@ -16,17 +19,23 @@ export default function Skills() {
                     Technologies I work with
                 </h2>
 
-                <div className="mt-16 flex flex-wrap gap-4">
-                    {skills.map(({ name, icon: Icon }) => (
-                        <div
-                            key={name}
-                            className="group flex items-center gap-3 rounded-full border border-cyan-500/30 bg-white/5 px-6 py-3 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-cyan-500/10 hover:shadow-[0_0_25px_rgba(34,211,238,0.35)]"
-                        >
-                            <Icon className="text-xl text-cyan-400 transition-transform duration-300 group-hover:rotate-12" />
-                            <span>{name}</span>
-                        </div>
-                    ))}
-                </div>
+                {skillGroups.map((group, index) => (
+                    <Reveal
+                        key={group.title}
+                        delay={index * 0.15}
+                    >
+                        <SkillGroupCard title={group.title}>
+                            {group.skills.map((skill) => (
+                                <span
+                                    key={skill}
+                                    className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-300 transition-colors duration-300 hover:border-cyan-400 hover:bg-cyan-500/20"
+                                >
+                                    {skill}
+                                </span>
+                            ))}
+                        </SkillGroupCard>
+                    </Reveal>
+                ))}
             </div>
         </section>
     );

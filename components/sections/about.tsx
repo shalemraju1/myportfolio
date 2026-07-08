@@ -6,7 +6,7 @@ import SectionHeader from "@/components/ui/section-header";
 import { GlassCard } from "@/components/ui/glass-card";
 import StatCard from "@/components/ui/stat-card";
 import { stats } from "@/constants/about";
-
+import Reveal from "@/components/animations/reveal";
 export default function About() {
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -19,11 +19,13 @@ export default function About() {
             className="flex min-h-screen items-center border-t border-white/10"
         >
             <div className="mx-auto max-w-7xl px-6 py-24">
-                <SectionHeader
-                    eyebrow="About Me"
-                    title="Building intelligent software with"
-                    highlight="AI, Full Stack Development & Problem Solving."
-                />
+                <Reveal>
+                    <SectionHeader
+                        eyebrow="About Me"
+                        title="Building intelligent software with"
+                        highlight="AI, Full Stack Development & Problem Solving."
+                    />
+                </Reveal>
 
                 <p className="mt-8 max-w-3xl text-lg leading-8 text-muted-foreground">
                     I'm{" "}

@@ -2,6 +2,8 @@
 
 import { projects } from "@/constants/projects";
 import ProjectCard from "@/components/ui/project-card";
+import StaggerReveal from "@/components/animations/stagger-reveal";
+import Reveal from "@/components/animations/reveal";
 
 export default function Projects() {
     return (
@@ -18,15 +20,21 @@ export default function Projects() {
                     Featured Work
                 </h2>
 
-                <div className="mt-16 space-y-10">
-                    {projects.map((project, index) => (
-                        <ProjectCard
-                            key={project.title}
-                            project={project}
-                            index={index}
-                        />
-                    ))}
-                </div>
+                <StaggerReveal>
+                    <div className="mt-16 space-y-10">
+                        {projects.map((project, index) => (
+                            <Reveal
+                                key={project.title}
+                                delay={index * 0.15}
+                            >
+                                <ProjectCard
+                                    project={project}
+                                    index={index}
+                                />
+                            </Reveal>
+                        ))}
+                    </div>
+                </StaggerReveal>
             </div>
         </section>
     );

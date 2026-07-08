@@ -11,9 +11,12 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { name: "Home", id: "home" },
   { name: "About", id: "about" },
-  { name: "Skills", id: "skills" },
-  { name: "Projects", id: "projects" },
+  { name: "Education", id: "education" },
   { name: "Experience", id: "experience" },
+  { name: "Projects", id: "projects" },
+  { name: "Skills", id: "skills" },
+  { name: "Highlights", id: "highlights" },
+  { name: "Certifications", id: "certifications" },
   { name: "Contact", id: "contact" },
 ];
 
@@ -155,10 +158,10 @@ export function Navbar() {
           aria-label="Portfolio Home"
         >
           <div className="relative h-7 w-7 rounded-md bg-linear-to-tr from-neon-blue to-neon-purple flex items-center justify-center text-background font-bold text-sm shadow-[0_0_15px_rgba(0,242,254,0.3)] group-hover:scale-105 transition-transform duration-300">
-            A
+            B
           </div>
           <span className="text-lg font-bold tracking-tight text-white group-hover:text-neon-blue transition-colors duration-300">
-            ANTIGRAVITY
+            Shalem Raju
           </span>
         </a>
 
