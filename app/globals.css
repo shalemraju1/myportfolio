@@ -12,28 +12,28 @@
   /* Override background and foreground */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   /* Modern premium font system using Geist */
   --font-sans: var(--font-geist-sans), Inter, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
-  
+
   /* Custom Accent & Neon Colors */
   --color-neon-blue: #00f2fe;
   --color-neon-purple: #9d4edd;
   --color-neon-pink: #f43f5e;
   --color-dark-accent: #0f172a;
-  
+
   /* Spacing */
   --spacing-18: 4.5rem;
   --spacing-22: 5.5rem;
   --spacing-26: 6.5rem;
-  
+
   /* Shadows and Glows */
   --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
   --shadow-neon-blue: 0 0 25px rgba(0, 242, 254, 0.25), 0 0 50px rgba(0, 242, 254, 0.1);
   --shadow-neon-purple: 0 0 25px rgba(157, 78, 221, 0.25), 0 0 50px rgba(157, 78, 221, 0.1);
   --shadow-neon-pink: 0 0 25px rgba(244, 63, 94, 0.25), 0 0 50px rgba(244, 63, 94, 0.1);
-  
+
   /* Border Radius System */
   --radius-glass-sm: 8px;
   --radius-glass: 16px;
@@ -141,7 +141,7 @@
 
 /* Background Grids and Orbs */
 @utility bg-grid-pattern {
-  background-image: 
+  background-image:
     linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
   background-size: 40px 40px;
@@ -169,4 +169,18 @@ body {
 *:focus-visible {
   outline: 2px solid #00f2fe;
   outline-offset: 4px;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.animate-slowZoom {
+  animation: slowZoom 18s ease-in-out infinite alternate;
 }

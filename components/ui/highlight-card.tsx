@@ -1,43 +1,58 @@
 import { GlassCard } from "@/components/ui/glass-card";
+import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 
 interface HighlightCardProps {
     icon: string;
     title: string;
+    subtitle: string;
     description: string;
-    year: string;
+    link?: string;
 }
 
 export default function HighlightCard({
     icon,
     title,
+    subtitle,
     description,
-    year,
+    link,
 }: HighlightCardProps) {
     return (
         <GlassCard
             interactive
             glowColor="blue"
-            glowIntensity="medium"
-            className="p-6"
+            glowIntensity="low"
+            className="flex h-full flex-col p-6"
         >
-            <div className="flex items-start gap-4">
-                <div className="text-4xl">
-                    {icon}
-                </div>
+            <div className="text-4xl">{icon}</div>
 
-                <div className="flex-1">
-                    <p className="text-sm text-cyan-400 font-semibold">
-                        {year}
-                    </p>
+            <h3 className="mt-5 text-2xl font-bold">
+                {title}
+            </h3>
 
-                    <h3 className="mt-1 text-xl font-bold">
-                        {title}
-                    </h3>
+            <p className="mt-2 font-medium text-cyan-400">
+                {subtitle}
+            </p>
 
-                    <p className="mt-3 text-muted-foreground leading-7">
-                        {description}
-                    </p>
-                </div>
+            <p className="mt-4 leading-7 text-muted-foreground">
+                {description}
+            </p>
+
+            <div className="mt-auto pt-6">
+                {link ? (
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-cyan-400 transition hover:text-cyan-300"
+                    >
+                        View Certificate
+                        <HiArrowTopRightOnSquare size={16} />
+                    </a>
+                ) : (
+                    <span className="text-sm text-slate-500">
+                        Certificate Coming Soon
+                    </span>
+                )}
             </div>
         </GlassCard>
     );

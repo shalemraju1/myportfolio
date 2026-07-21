@@ -11,6 +11,8 @@ export default function ContactCard({
     value,
     href,
 }: ContactCardProps) {
+    const isMail = href.startsWith("mailto:");
+
     return (
         <GlassCard
             interactive
@@ -24,8 +26,10 @@ export default function ContactCard({
 
             <a
                 href={href}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...(!isMail && {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                })}
                 className="mt-3 block break-all text-lg font-semibold transition hover:text-cyan-300"
             >
                 {value}

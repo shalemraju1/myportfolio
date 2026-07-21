@@ -1,16 +1,34 @@
-export const experience = [
+export const experiences = [
+
     {
-        year: "2026",
-        title: "Final Year B.Tech (AI & ML)",
-        company: "MLR Institute of Technology",
+        title: "AI & ML Virtual Intern",
+        company: "Infosys Springboard",
+        period: "2026",
         description:
-            "Pursuing B.Tech in Artificial Intelligence & Machine Learning with a focus on Full Stack Development and AI applications.",
+            "Completed industry-oriented training in Artificial Intelligence and Machine Learning through guided assignments, practical exercises, and real-world case studies.",
+        technologies: [
+            "AI",
+            "Machine Learning",
+            "Python",
+            "TensorFlow",
+        ],
+        link: "https://infyspringboard.onwingspan.com/public-assets/infosysheadstart/cert/88e4a24f-37f9-4289-9b96-f7c8f59a5d4b/a5a8a3ac-681e-4b05-9dd9-699de66ba456.pdf", // Add credential link later
     },
+
     {
-        year: "2026",
-        title: "Frontend Developer Intern",
-        company: "Confidential Company",
+        title: "Project Team Lead",
+        company: "Real-Time Research Project",
+        period: "2024 – Present",
         description:
-            "Developed enterprise React + TypeScript modules, improved UI components, and implemented business workflows during internship.",
+            "Leading the development of an AI-based research project, coordinating the team, managing technical decisions, and overseeing implementation from planning to deployment.",
+        technologies: [
+            "Python",
+            "TensorFlow",
+            "React",
+            "TypeScript",
+            "Git",
+        ],
+        link: "", // Add project/research link later
     },
+
 ];

@@ -9,11 +9,11 @@ export const siteConfig = {
     description:
         "AI Engineer specializing in Machine Learning, Full Stack Development and intelligent applications.",
 
-    email: "your-email@example.com",
+    email: "bejawadashalem@gmail.com",
 
     github: "https://github.com/shalemraju1",
 
-    linkedin: "https://linkedin.com/in/YOUR-LINKEDIN",
+    linkedin: "https://www.linkedin.com/in/shalem-raju-bejawada-170b40290/",
 
     resume: "/resume.pdf",
 };

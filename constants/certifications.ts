@@ -1,22 +1,16 @@
-import type { Certification } from "@/types/certification";
-
-export const certifications: Certification[] = [
+export const certifications = [
     {
-        title: "NPTEL Certification",
+        title: "Introduction to Internet of Things",
         issuer: "NPTEL",
         year: "2025",
-        credentialUrl: "",
+        credential:
+            "https://drive.google.com/file/d/1wyBA34Ho_hmQ6rMSCQ6ofZks4Mt8oFkL/view?usp=sharing",
     },
     {
-        title: "Java Programming",
+        title: "Oracle Java Foundations",
         issuer: "LinkedIn Learning",
         year: "2025",
-        credentialUrl: "",
-    },
-    {
-        title: "Infosys Internship",
-        issuer: "Infosys Springboard",
-        year: "2025",
-        credentialUrl: "",
+        credential:
+            "https://www.linkedin.com/learning/certificates/79a98f32c14dcc3f4d0b690b29515e47ad1b103a389f984d34b8af6545f586e7?trk=share_certificate",
     },
 ];

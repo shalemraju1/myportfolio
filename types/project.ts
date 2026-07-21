@@ -3,7 +3,7 @@ export interface Project {
     type: string;
     description: string;
     image: string;
-    github: string;
-    demo: string;
+    github?: string;
+    demo?: string;
     technologies: string[];
 }

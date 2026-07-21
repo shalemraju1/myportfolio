@@ -2,7 +2,7 @@
 
 import SectionHeader from "@/components/ui/section-header";
 import TimelineItem from "@/components/ui/timeline-item";
-import { experience } from "@/constants/experience";
+import { experiences } from "@/constants/experience";
 import Reveal from "@/components/animations/reveal";
 
 export default function Experience() {
@@ -19,16 +19,18 @@ export default function Experience() {
                 />
 
                 <div className="relative mt-16 border-l border-cyan-500/20 pl-8 space-y-10">
-                    {experience.map((item, index) => (
+                    {experiences.map((item, index) => (
                         <Reveal
-                            key={`${item.year}-${item.title}`}
+                            key={`${item.period}-${item.title}`}
                             delay={index * 0.15}
                         >
                             <TimelineItem
-                                year={item.year}
+                                year={item.period}
                                 title={item.title}
                                 company={item.company}
                                 description={item.description}
+                                technologies={item.technologies}
+                                link={item.link}
                             />
                         </Reveal>
                     ))}

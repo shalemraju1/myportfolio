@@ -8,7 +8,7 @@ import { FloatingParticles } from "./floating-particles";
 import { HolographicRings } from "./holographic-rings";
 import { GradientLighting } from "./gradient-lighting";
 import { CameraRig } from "./camera-rig";
-
+import HeroVideo from "@/components/ui/hero-video";
 /**
  * Inner scene content – separated so Suspense can catch it cleanly.
  */

@@ -1,32 +1,29 @@
-import type { Highlight } from "@/types/highlight";
-
-export const highlights: Highlight[] = [
+export const highlights = [
     {
-        year: "2024",
-        title: "AWS Workshop Winner",
+        title: "AWS Cloud Trek Competition",
+        subtitle: "First Prize",
         description:
-            "Secured First Place in an AWS hands-on workshop by designing and implementing cloud-based solutions.",
+            "Won first place in the AWS Cloud Trek Competition for technical excellence and problem-solving.",
         icon: "🏆",
+        link:
+            "https://drive.google.com/file/d/11t5WzugTJ_cJ7yWAEceqWczUysSIshl3/view?usp=sharing",
     },
     {
-        year: "2025",
-        title: "IIT Madras Hackathon Finalist",
+        title: "IIT Madras Hackathon",
+        subtitle: "Finalist",
         description:
-            "Finalist at the IIT Madras Hackathon, developing innovative AI-powered solutions in a competitive national event.",
+            "Selected as a finalist for developing an innovative solution under competitive hackathon conditions.",
         icon: "🥈",
+        link:
+            "https://drive.google.com/file/d/1a9fPM2hdyIa9FuYKPbtqy4zKZi17tQzb/view?usp=sharing",
     },
     {
-        year: "2025",
-        title: "Team Lead - AI Research Project",
+        title: "Google Cloud Student Jams",
+        subtitle: "Certified Participant",
         description:
-            "Led a multidisciplinary team to build an AI-powered Brain Tumor Detection system using Deep Learning.",
-        icon: "👨‍💻",
-    },
-    {
-        year: "2025",
-        title: "Hackathon Participation",
-        description:
-            "Actively participated in multiple hackathons including CMR and KLS VDIT, collaborating on innovative software solutions.",
-        icon: "🚀",
+            "Completed hands-on Google Cloud learning sessions covering cloud fundamentals and services.",
+        icon: "☁️",
+        link:
+            "https://drive.google.com/file/d/1aYCkJ9BFpHzlIqByI1DzXhp9vUEjS_J_/view?usp=sharing",
     },
 ];

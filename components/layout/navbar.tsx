@@ -12,10 +12,10 @@ const navLinks = [
   { name: "Home", id: "home" },
   { name: "About", id: "about" },
   { name: "Education", id: "education" },
-  { name: "Experience", id: "experience" },
-  { name: "Projects", id: "projects" },
   { name: "Skills", id: "skills" },
-  { name: "Highlights", id: "highlights" },
+  { name: "Projects", id: "projects" },
+  { name: "Achievements", id: "achievements" },
+  { name: "Hackathons", id: "hackathons" },
   { name: "Certifications", id: "certifications" },
   { name: "Contact", id: "contact" },
 ];
@@ -210,7 +210,7 @@ export function Navbar() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/shalemraju1"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
@@ -219,7 +219,7 @@ export function Navbar() {
               <FiGithub size={20} className="hover:text-neon-blue transition-colors duration-300" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/shalem-raju-bejawada-170b40290/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"

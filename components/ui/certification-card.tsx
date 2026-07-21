@@ -1,41 +1,55 @@
 import { GlassCard } from "@/components/ui/glass-card";
+import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 
 interface CertificationCardProps {
     title: string;
     issuer: string;
     year: string;
-    credentialUrl?: string;
+    credential?: string;
 }
 
 export default function CertificationCard({
     title,
     issuer,
     year,
-    credentialUrl,
+    credential,
 }: CertificationCardProps) {
     return (
         <GlassCard
             interactive
-            glowColor="purple"
+            glowColor="blue"
             glowIntensity="low"
-            className="p-6"
+            className="flex h-full flex-col p-6"
         >
-            <p className="text-sm font-semibold text-cyan-400">{year}</p>
+            <span className="text-sm font-semibold text-cyan-400">
+                {year}
+            </span>
 
-            <h3 className="mt-2 text-xl font-bold">{title}</h3>
+            <h3 className="mt-3 text-xl font-bold">
+                {title}
+            </h3>
 
-            <p className="mt-2 text-muted-foreground">{issuer}</p>
+            <p className="mt-2 text-slate-400">
+                {issuer}
+            </p>
 
-            {credentialUrl && (
-                <a
-                    href={credentialUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-block text-cyan-400 transition hover:text-cyan-300"
-                >
-                    View Credential →
-                </a>
-            )}
+            <div className="mt-auto pt-6">
+                {credential ? (
+                    <a
+                        href={credential}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-cyan-400 transition hover:text-cyan-300"
+                    >
+                        Verify Credential
+                        <HiArrowTopRightOnSquare size={16} />
+                    </a>
+                ) : (
+                    <span className="text-sm text-slate-500">
+                        Credential Coming Soon
+                    </span>
+                )}
+            </div>
         </GlassCard>
     );
 }

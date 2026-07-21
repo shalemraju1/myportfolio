@@ -9,22 +9,27 @@ export default function Certifications() {
     return (
         <section
             id="certifications"
-            className="min-h-screen border-t border-white/10 py-24"
+            className="border-t border-white/10 py-24"
         >
             <div className="mx-auto max-w-7xl px-6">
                 <SectionHeader
                     eyebrow="Certifications"
-                    title="Learning"
-                    highlight="Never Stops"
+                    title="Continuous Learning"
+                    highlight="Industry Certifications"
                 />
 
-                <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {certifications.map((cert, index) => (
+                <div className="mt-12 grid gap-6 md:grid-cols-2">
+                    {certifications.map((item, index) => (
                         <Reveal
-                            key={cert.title}
+                            key={item.title}
                             delay={index * 0.15}
                         >
-                            <CertificationCard {...cert} />
+                            <CertificationCard
+                                title={item.title}
+                                issuer={item.issuer}
+                                year={item.year}
+                                credential={item.credential}
+                            />
                         </Reveal>
                     ))}
                 </div>

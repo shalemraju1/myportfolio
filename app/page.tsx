@@ -8,6 +8,7 @@ import Highlights from "@/components/sections/highlights";
 import Certifications from "@/components/sections/certifications";
 import Contact from "@/components/sections/contact";
 import Footer from "@/components/sections/footer";
+import Hackathons from "@/components/sections/hackathons";
 
 
 export default function Home() {
@@ -16,13 +17,14 @@ export default function Home() {
             <Hero />
             <About />
             <Education />
+            <Skills />
             <Experience />
             <Projects />
-            <Skills />
             <Highlights />
+            <Hackathons />
             <Certifications />
             <Contact />
-            < Footer />
+            <Footer />
         </main>
     );
 }

@@ -1,9 +1,10 @@
 export const socials = {
     github: "https://github.com/shalemraju1",
 
-    linkedin: "https://linkedin.com/in/YOUR_LINKEDIN",
+    linkedin:
+        "https://www.linkedin.com/in/shalem-raju-bejawada-170b40290/",
 
-    email: "mailto:your-email@example.com",
+    email: "mailto:bejawadashalem@gmail.com",
 
     resume: "/resume.pdf",
 };
